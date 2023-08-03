@@ -131,8 +131,8 @@ if __name__ == "__main__":
 
     save_reviews()
     print("Reviews Done")
-    save_study_materials()
-    print("Study Materials Done")
+    # save_study_materials()
+    # print("Study Materials Done")
     save_subjects()
     print("Subjects Done")
     save_level_progressions()
@@ -159,14 +159,14 @@ if __name__ == "__main__":
     )
 
     # study materials
-    if os.path.exists(f"{TODAY}_study_materials.csv"):
-        api.upload_file(
-            path_or_fileobj=f"{TODAY}_study_materials.csv",
-            path_in_repo=f"study_materials/{TODAY}_study_materials.csv",
-            repo_id="osbm/wanikani-logs",
-            repo_type="dataset",
-            token=HF_TOKEN,
-        )
+    # if os.path.exists(f"{TODAY}_study_materials.csv"):
+    #     api.upload_file(
+    #         path_or_fileobj=f"{TODAY}_study_materials.csv",
+    #         path_in_repo=f"study_materials/{TODAY}_study_materials.csv",
+    #         repo_id="osbm/wanikani-logs",
+    #         repo_type="dataset",
+    #         token=HF_TOKEN,
+    #     )
 
     api.upload_folder(
         repo_id="osbm/wanikani-dataset",
